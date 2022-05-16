@@ -1,0 +1,18 @@
+div{
+  width: 500px;
+  height: 100px;
+}
+
+a {
+  font-size: 15px;
+  font-weight: normal;
+  color: cornflowerblue;
+  border: 1px solid darkblue;
+  padding: 3px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
