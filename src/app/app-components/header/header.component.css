@@ -1,0 +1,22 @@
+ul {
+  display: flex;
+  background-color: cadetblue;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  margin-top: 0;
+  padding: 20px;
+}
+
+li {
+  list-style-type: none;
+  font-size: 30px;
+}
+
+a{
+  color: blanchedalmond;
+  text-decoration: none;
+}
+a :hover{
+  cursor: pointer;
+}
+
