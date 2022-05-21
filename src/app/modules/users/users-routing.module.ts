@@ -1,11 +1,15 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
 
-import {UsersComponent} from "./users-components/users/users.component";
+import {UsersComponent} from "./components/users/users.component";
+import {UsersResolver} from "./services";
 
 const routes: Routes = [
-  {path: '', component: UsersComponent}
-  ];
+  {
+    path: '', component: UsersComponent,
+    resolve: {userData: UsersResolver}
+  }
+];
 
 @NgModule({
   imports: [
@@ -13,4 +17,5 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class UsersRoutingModule { }
+export class UsersRoutingModule {
+}

@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+
 import {UserInterface} from "../../interfaces/user.interface";
-import {UserService} from "../../user.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-users',
@@ -13,11 +12,12 @@ export class UsersComponent implements OnInit {
 
   users: UserInterface[];
 
-  constructor(private userService: UserService) {
+  constructor(private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {
-    this.userService.getAll().subscribe(response => this.users = response);
+    this.activatedRoute.data.subscribe(({userData}) =>
+      this.users = userData)
   }
 
 }

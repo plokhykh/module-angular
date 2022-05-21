@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 
-import {UserInterface} from "./interfaces/user.interface";
-import {urls} from '../../constants/urls';
+import {UserInterface} from "../interfaces/user.interface";
+import {urls} from '../../../constants/urls';
 
 
 @Injectable({
