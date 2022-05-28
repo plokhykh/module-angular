@@ -1,0 +1,13 @@
+.header{
+  background-color: cadetblue;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+  padding: 30px 40px;
+  color: aliceblue;
+  font-size: 20px;
+}
