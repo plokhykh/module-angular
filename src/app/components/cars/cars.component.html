@@ -2,7 +2,7 @@
   <div><label>model: <input type="text" formControlName="model"></label></div>
   <div><label>price: <input type="text" formControlName="price"></label></div>
   <div><label>year: <input type="text" formControlName="year"></label></div>
-  <button (click)="save()">save</button>
+  <button (click)="save()">{{!carForUpdate ? 'save' : 'update'}}</button>
 </form>
 
 <div>

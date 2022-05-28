@@ -47,12 +47,14 @@ export class CarsComponent implements OnInit {
     if (!this.carForUpdate) {
       this.carService.create(this.form.value).subscribe(value => {
         this.cars.push(value)
+        this.form.reset()
       })
     } else {
       this.carService.updateById(this.carForUpdate.id, this.form.value).subscribe(value => {
         const updateCar = this.cars.find(item => item.id === this.carForUpdate?.id)
         Object.assign(updateCar, value)
         this.carForUpdate = null;
+        this.form.reset()
       })
     }
   }
